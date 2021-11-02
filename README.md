@@ -86,5 +86,10 @@ main()
   .finally(async () => {
     await prisma.$disconnect()
   })
+  
+  model Post {
+  Datetime @default(now())
+  Datetime @updatedAt
+  }
 
 ```
